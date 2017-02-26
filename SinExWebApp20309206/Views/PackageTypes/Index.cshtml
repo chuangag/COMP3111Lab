@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SinExWebApp20309206.Models.PackageType>
+
+@{
+    ViewBag.Title = "Package Types";
+}
+
+<h2>Package Types</h2>
+
+<p>
+    
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+            @foreach (var size in item.PackageTypeSizes)
+            {
+                <br />@Html.DisplayFor(modelItem => size.Size)
+            }
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+}
+
+</table>

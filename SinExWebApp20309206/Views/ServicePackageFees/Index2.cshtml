@@ -1,0 +1,69 @@
+﻿
+@model IEnumerable<SinExWebApp20309206.Models.ServicePackageFee>
+@{
+    ViewBag.Title = "Service/Package Fees";
+}
+@{
+    Dictionary<string, Dictionary<string, SinExWebApp20309206.Models.ServicePackageFee>> Dic = new Dictionary<string, Dictionary<string, SinExWebApp20309206.Models.ServicePackageFee>>();
+
+    foreach (var item in Model)
+    {
+
+
+        if (!Dic.ContainsKey(item.ServiceType.Type)) {
+            Dic.Add(item.ServiceType.Type, new Dictionary<string, SinExWebApp20309206.Models.ServicePackageFee>());
+        }
+        if (!Dic[item.ServiceType.Type].ContainsKey(item.PackageType.Type))
+        {
+            Dic[item.ServiceType.Type].Add(item.PackageType.Type, item);
+        }
+
+    }
+
+}
+<h2>Service/Package Fees </h2>
+<table class="table">
+    <tr>
+        <th rowspan="2">
+            @Html.DisplayNameFor(model => model.ServiceType)
+        </th>
+        <th colspan="@Dic.Count">
+            <center>@Html.DisplayNameFor(model => model.PackageType)</center>
+        </th>
+        
+    </tr>
+    <tr>
+        @foreach (var Service in Dic.Keys) {
+            foreach(var Package in Dic[Service].Keys)
+            {
+                <th>
+                    @Package
+                </th>
+            }
+            break;
+        }
+    </tr>
+   
+    
+        @foreach (var Service in Dic.Keys)
+        {
+            <tr>
+                <td>
+                    @Service
+                </td>
+                @foreach (var Package in Dic[Service].Keys)
+                {
+                <td>
+                    @{string Fee = Dic[Service][Package].Fee.ToString() + "(" + Dic[Service][Package].MinimumFee.ToString() + ")";
+                    @Fee}
+
+                </td>
+                }
+            </tr>
+        }
+
+
+            
+
+
+</table>

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<SinExWebApp20309206.ViewModels.ShipmentsListViewModel>
+
+@if (Model.Any())
+{
+<p>
+    The following are the shipments for the specified account.
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WaybillId)
+        </th>
+        <th>
+            @Html.ActionLink("ServiceType", "GenerateHistoryReport", new { sortOrder= ViewBag.ServiceTypeSortParm, currentShippingAccountId = ViewBag.CurrentAccountId,currentServiceType=ViewBag.CurrentServiceType,currentShippedDate=ViewBag.CurrentShippedDate,currentDeliveredDate=ViewBag.CurrentDeliveredDate,currentRecipientName=ViewBag.CurrentRecipientName,currentOrigin=ViewBag.CurrentOrigin,currentDestination=ViewBag.CurrentDestination})
+        </th>
+        <th>
+            @Html.ActionLink("ShippedDate", "GenerateHistoryReport", new { sortOrder = ViewBag.ShippedDateSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            
+        </th>
+        <th>
+            @Html.ActionLink("DeliveredDate", "GenerateHistoryReport", new { sortOrder = ViewBag.DeliveredDateSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            
+        </th>
+        <th>
+            @Html.ActionLink("RecipientName", "GenerateHistoryReport", new { sortOrder = ViewBag.RecipientNameSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfPackages)
+        </th>
+        <th>
+            @Html.ActionLink("Origin", "GenerateHistoryReport", new { sortOrder = ViewBag.OriginSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            
+        </th>
+        <th>
+            @Html.ActionLink("Destination", "GenerateHistoryReport", new { sortOrder = ViewBag.DestinationSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            
+        </th>
+        
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WaybillId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShippedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveredDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecipientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfPackages)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destination)
+        </td>
+        
+        
+        <td>
+            
+        </td>
+    </tr>
+}
+
+</table>
+}

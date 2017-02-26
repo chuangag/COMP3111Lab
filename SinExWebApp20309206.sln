@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinExWebApp20309206", "SinExWebApp20309206\SinExWebApp20309206.csproj", "{99DEB57C-76AE-4CC6-8FB4-AA1A3D813F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinExWebApp20309206.Tests", "SinExWebApp20309206.Tests\SinExWebApp20309206.Tests.csproj", "{D34672CD-1AAC-4DBF-A826-FEA537C1529A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99DEB57C-76AE-4CC6-8FB4-AA1A3D813F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DEB57C-76AE-4CC6-8FB4-AA1A3D813F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DEB57C-76AE-4CC6-8FB4-AA1A3D813F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DEB57C-76AE-4CC6-8FB4-AA1A3D813F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D34672CD-1AAC-4DBF-A826-FEA537C1529A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D34672CD-1AAC-4DBF-A826-FEA537C1529A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D34672CD-1AAC-4DBF-A826-FEA537C1529A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D34672CD-1AAC-4DBF-A826-FEA537C1529A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
