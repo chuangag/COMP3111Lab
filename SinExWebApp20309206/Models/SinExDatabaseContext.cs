@@ -19,6 +19,7 @@ namespace SinExWebApp20309206.Models
         {
         }
 
+        public System.Data.Entity.DbSet<SinExWebApp20309206.Models.ShippingAccount> ShippingAccounts { get; set; }
         public System.Data.Entity.DbSet<SinExWebApp20309206.Models.PackageType> PackageTypes { get; set; }
 
         public System.Data.Entity.DbSet<SinExWebApp20309206.Models.ServicePackageFee> ServicePackageFees { get; set; }

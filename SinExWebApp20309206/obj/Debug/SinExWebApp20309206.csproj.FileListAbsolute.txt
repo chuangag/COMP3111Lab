@@ -244,6 +244,7 @@ C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206\bin\Microsof
 C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.csprojResolveAssemblyReference.cache
 C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.dll
 C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.pdb
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\ApplicationInsights.config
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\roslyn\csc.exe
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -256,7 +257,6 @@ C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bi
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\roslyn\vbc.exe
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\roslyn\VBCSCompiler.exe
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\ApplicationInsights.config
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\SinExWebApp20309206.dll.config
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\SinExWebApp20309206.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\SinExWebApp20309206.pdb
@@ -271,6 +271,7 @@ C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bi
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.CSharp.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.Owin.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.Owin.Security.Cookies.dll
@@ -283,14 +284,21 @@ C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bi
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Newtonsoft.Json.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Owin.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.Extensions.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.Helpers.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.Mvc.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.Optimization.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.Razor.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.Services.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.WebPages.Deployment.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.WebPages.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Web.WebPages.Razor.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\System.Xml.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\WebGrease.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\X.PagedList.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\X.PagedList.Mvc.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\EntityFramework.xml
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\EntityFramework.SqlServer.xml
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.AI.DependencyCollector.xml
@@ -319,6 +327,4 @@ C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bi
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.pdb
-C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\X.PagedList.dll
-C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\X.PagedList.Mvc.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.csprojResolveAssemblyReference.cache
