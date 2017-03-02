@@ -11,29 +11,29 @@
             @Html.DisplayNameFor(model => model.WaybillId)
         </th>
         <th>
-            @Html.ActionLink("ServiceType", "GenerateHistoryReport", new { sortOrder= ViewBag.ServiceTypeSortParm, currentShippingAccountId = ViewBag.CurrentAccountId,currentServiceType=ViewBag.CurrentServiceType,currentShippedDate=ViewBag.CurrentShippedDate,currentDeliveredDate=ViewBag.CurrentDeliveredDate,currentRecipientName=ViewBag.CurrentRecipientName,currentOrigin=ViewBag.CurrentOrigin,currentDestination=ViewBag.CurrentDestination})
+            @Html.ActionLink("ServiceType", "GenerateHistoryReport", new { sortOrder= ViewBag.ServiceTypeSortParm, currentShippingAccountId = ViewBag.CurrentAccountId,currentServiceType=ViewBag.CurrentServiceType,currentShippedDate=ViewBag.CurrentShippedDate,currentDeliveredDate=ViewBag.CurrentDeliveredDate,currentRecipientName=ViewBag.CurrentRecipientName,currentOrigin=ViewBag.CurrentOrigin,currentDestination=ViewBag.CurrentDestination,currentStartDate=ViewBag.CurrentStartDate, currentEndDate = ViewBag.CurrentEndDate })
         </th>
         <th>
-            @Html.ActionLink("ShippedDate", "GenerateHistoryReport", new { sortOrder = ViewBag.ShippedDateSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            @Html.ActionLink("ShippedDate", "GenerateHistoryReport", new { sortOrder = ViewBag.ShippedDateSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination, currentStartDate = ViewBag.CurrentStartDate, currentEndDate = ViewBag.CurrentEndDate })
             
         </th>
         <th>
-            @Html.ActionLink("DeliveredDate", "GenerateHistoryReport", new { sortOrder = ViewBag.DeliveredDateSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            @Html.ActionLink("DeliveredDate", "GenerateHistoryReport", new { sortOrder = ViewBag.DeliveredDateSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination, currentStartDate = ViewBag.CurrentStartDate, currentEndDate = ViewBag.CurrentEndDate })
             
         </th>
         <th>
-            @Html.ActionLink("RecipientName", "GenerateHistoryReport", new { sortOrder = ViewBag.RecipientNameSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            @Html.ActionLink("RecipientName", "GenerateHistoryReport", new { sortOrder = ViewBag.RecipientNameSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination, currentStartDate = ViewBag.CurrentStartDate, currentEndDate = ViewBag.CurrentEndDate })
             
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NumberOfPackages)
         </th>
         <th>
-            @Html.ActionLink("Origin", "GenerateHistoryReport", new { sortOrder = ViewBag.OriginSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            @Html.ActionLink("Origin", "GenerateHistoryReport", new { sortOrder = ViewBag.OriginSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination, currentStartDate = ViewBag.CurrentStartDate, currentEndDate = ViewBag.CurrentEndDate })
             
         </th>
         <th>
-            @Html.ActionLink("Destination", "GenerateHistoryReport", new { sortOrder = ViewBag.DestinationSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination })
+            @Html.ActionLink("Destination", "GenerateHistoryReport", new { sortOrder = ViewBag.DestinationSortParm, currentShippingAccountId = ViewBag.CurrentAccountId, currentServiceType = ViewBag.CurrentServiceType, currentShippedDate = ViewBag.CurrentShippedDate, currentDeliveredDate = ViewBag.CurrentDeliveredDate, currentRecipientName = ViewBag.CurrentRecipientName, currentOrigin = ViewBag.CurrentOrigin, currentDestination = ViewBag.CurrentDestination, currentStartDate = ViewBag.CurrentStartDate, currentEndDate = ViewBag.CurrentEndDate })
             
         </th>
         

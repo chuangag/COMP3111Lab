@@ -3,7 +3,15 @@
 @using (Html.BeginForm("GenerateHistoryReport", "Shipments", FormMethod.Get))
 {
     @Html.LabelFor(a => a.ShippingAccountId,"Shipping Account:")
-   
+    
     @Html.DropDownListFor(a => a.ShippingAccountId,Model.ShippingAccounts, htmlAttributes: new { @Value = ViewBag.CurrentAccountId})
+    <br />
+    
+    @Html.LabelFor(a => a.StartDate, "From:")
+
+    @Html.TextBoxFor(a => a.StartDate, htmlAttributes: new { @Value = ViewBag.CurrentStartDate,Type="date" })
+    @Html.LabelFor(a => a.EndDate, "To:")
+
+    @Html.TextBoxFor(a => a.EndDate, htmlAttributes: new { @Value = ViewBag.CurrentEndDate, Type = "date" })
     <input type="submit" value="Search"/>
 }

@@ -1,0 +1,14 @@
+﻿@model SinExWebApp20309206.ViewModels.ShipmentsDateSearchViewModel
+
+@using (Html.BeginForm("GenerateHistoryReport", "Shipments", FormMethod.Get))
+{
+    @Html.LabelFor(a => a.StartDate, "From:")
+
+    @Html.DropDownListFor(a => a.StartDate,Model.StartDates,htmlAttributes: new { @Value = ViewBag.StartDate })
+    @Html.LabelFor(a => a.EndDate, "To:")
+
+    @Html.DropDownListFor(a => a.EndDate, Model.EndDates, htmlAttributes: new { @Value = ViewBag.EndDate })
+    <input type="submit" value="Search" />
+}
+
+
