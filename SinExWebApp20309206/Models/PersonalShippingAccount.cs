@@ -10,9 +10,11 @@ namespace SinExWebApp20309206.Models
     {
         [Required(ErrorMessage ="The First Name field is Required")]
         [StringLength(35)]
+        [Display(Name = "First Name")]
         public virtual string firstName { get; set; }
         [Required]
         [StringLength(35, ErrorMessage = "The field Last Name must be a string with a maximum length of 35")]
+        [Display(Name = "Last Name")]
         public virtual string lastName { get; set; }
     }
 }
