@@ -1,0 +1,10 @@
+Problem exist with 
+1. EntityFramework
+  sol:
+  In package manager console
+  1. uninstall-package EntityFramework -Force
+  2. Restart Visual Studio
+  3. Install-Package EntityFramework
+
+2. Database
+  sol: delete the two files in App-Data before update-database
