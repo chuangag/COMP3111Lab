@@ -1,0 +1,106 @@
+﻿@model SinExWebApp20309206.ViewModels.RegisterCustomerViewModel
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PersonalInformation.firstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.firstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.firstName, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.lastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.lastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.lastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PersonalInformation.phoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.phoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.phoneNumber, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.emailAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.emailAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.emailAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <h4>Address Information</h4>
+        <hr />
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PersonalInformation.buildingInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.buildingInformation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.buildingInformation, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.streetInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.streetInformation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.streetInformation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            @Html.LabelFor(model => model.PersonalInformation.city, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.city, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.city, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.provinceCode, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.PersonalInformation.provinceCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.provinceCode, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.postalCode, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.PersonalInformation.postalCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.postalCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <h4>Credit Card Information</h4>
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PersonalInformation.cardType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.cardType, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.cardType, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.cardNumber, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.PersonalInformation.cardNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.cardNumber, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.securityNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
+                @Html.EditorFor(model => model.PersonalInformation.securityNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.securityNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PersonalInformation.cardholderName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PersonalInformation.cardholderName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.cardholderName, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.expiryMonth, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
+                @Html.EditorFor(model => model.PersonalInformation.expiryMonth, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.expiryMonth, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PersonalInformation.expiryYear, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
+                @Html.EditorFor(model => model.PersonalInformation.expiryYear, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonalInformation.expiryYear, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+
+        
