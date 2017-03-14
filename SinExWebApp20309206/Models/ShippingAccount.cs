@@ -14,6 +14,8 @@ namespace SinExWebApp20309206.Models
         
         public virtual int ShippingAccountId { get; set; }
         
+        [StringLength(10,MinimumLength =6)]
+        public virtual string UserName { get; set; }
         [Required]
         [StringLength(14,MinimumLength =8)]
         [RegularExpression(@"^[0-9]*$",ErrorMessage ="Phone number must be numeric")]
@@ -38,7 +40,7 @@ namespace SinExWebApp20309206.Models
         public virtual string city { get; set; }
         [Required(ErrorMessage = "The Province field is required")]
         [StringLength(2, MinimumLength = 2)]
-        [RegularExpression(@"^[A-Z]$")]
+        [RegularExpression(@"^[A-Z]*$")]
         [Display(Name = "Province")]
         public virtual string provinceCode { get; set; }
         [StringLength(6, MinimumLength = 5)]
@@ -72,6 +74,8 @@ namespace SinExWebApp20309206.Models
         [RegularExpression(@"^[0-9]*$", ErrorMessage = "The field Expiry Year must be a number")]
         [Display(Name = "Expiry Year")]
         public virtual int expiryYear { get; set; }
+
+        public virtual ICollection<Shipment> Shipments { get; set; }
 
     }
     

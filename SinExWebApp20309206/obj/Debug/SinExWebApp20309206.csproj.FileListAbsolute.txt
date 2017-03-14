@@ -327,4 +327,3 @@ C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bi
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.pdb
-C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206\obj\Debug\SinExWebApp20309206.csprojResolveAssemblyReference.cache

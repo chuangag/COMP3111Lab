@@ -170,7 +170,6 @@ C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206.Tests\bin\De
 C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206.Tests\obj\Debug\SinExWebApp20309206.Tests.csprojResolveAssemblyReference.cache
 C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206.Tests\obj\Debug\SinExWebApp20309206.Tests.dll
 C:\Users\chuangag\Downloads\SinExWebApp20309206\SinExWebApp20309206.Tests\obj\Debug\SinExWebApp20309206.Tests.pdb
-C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\obj\Debug\SinExWebApp20309206.Tests.csprojResolveAssemblyReference.cache
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\bin\Debug\SinExWebApp20309206.Tests.dll.config
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\bin\Debug\SinExWebApp20309206.Tests.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\bin\Debug\SinExWebApp20309206.Tests.pdb
@@ -196,5 +195,6 @@ C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Te
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\obj\Debug\SinExWebApp20309206.Tests.csprojResolveAssemblyReference.cache
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\obj\Debug\SinExWebApp20309206.Tests.dll
 C:\Users\d4561\Dropbox\學術\COMP3111\COMP3111Lab-master\SinExWebApp20309206.Tests\obj\Debug\SinExWebApp20309206.Tests.pdb
