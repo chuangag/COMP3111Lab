@@ -226,6 +226,7 @@
     <Compile Include="Models\BusinessShippingAccount.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\Destination.cs" />
+    <Compile Include="Models\FeeCalculator.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PackageType.cs" />
@@ -238,6 +239,7 @@
     <Compile Include="Models\SinExDatabaseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Validators\CardType.cs" />
     <Compile Include="ViewModels\RegisterCustomerViewModel.cs" />
     <Compile Include="ViewModels\ShipmentsDateSearchViewModel.cs" />
     <Compile Include="ViewModels\ShipmentsListViewModel.cs" />

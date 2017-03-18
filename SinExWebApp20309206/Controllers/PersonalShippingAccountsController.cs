@@ -14,7 +14,7 @@ namespace SinExWebApp20309206.Controllers
     {
         private SinExDatabaseContext db = new SinExDatabaseContext();
 
-       
+
         // GET: PersonalShippingAccounts/Details/5
         
 
@@ -42,9 +42,29 @@ namespace SinExWebApp20309206.Controllers
         }
 
         // GET: PersonalShippingAccounts/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit()
         {
-            if (id == null)
+            if (System.Web.HttpContext.Current.User.IsInRole("Customer"))
+            {
+                string userName = System.Web.HttpContext.Current.User.Identity.Name;
+                if (userName == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                ShippingAccount tempshippingAccount = db.ShippingAccounts.SingleOrDefault(s => s.UserName == userName);
+                if (tempshippingAccount == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                int tempId = tempshippingAccount.ShippingAccountId;
+                PersonalShippingAccount personalShippingAccount = (PersonalShippingAccount)db.ShippingAccounts.Find(tempId);
+
+                return View(personalShippingAccount);
+            }
+            else { return RedirectToAction("Index", "Home"); }
+
+            return HttpNotFound();
+            /*if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -53,7 +73,7 @@ namespace SinExWebApp20309206.Controllers
             {
                 return HttpNotFound();
             }
-            return View(personalShippingAccount);
+            return View(personalShippingAccount);*/
         }
 
         // POST: PersonalShippingAccounts/Edit/5
@@ -65,10 +85,12 @@ namespace SinExWebApp20309206.Controllers
         {
             if (ModelState.IsValid)
             {
+                personalShippingAccount.UserName= System.Web.HttpContext.Current.User.Identity.Name;
                 db.Entry(personalShippingAccount).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
+            
             return View(personalShippingAccount);
         }
 

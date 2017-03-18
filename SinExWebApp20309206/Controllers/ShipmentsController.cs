@@ -125,6 +125,8 @@ namespace SinExWebApp20309206.Controllers
             }
             base.Dispose(disposing);
         }
+        
+
         // GET: Shipments/GenerateHistoryReport
         public ActionResult GenerateHistoryReport(int? ShippingAccountId, string sortOrder, int? currentShippingAccountId, string currentServiceType, string currentShippedDate, string currentDeliveredDate, string currentRecipientName, string currentOrigin, string currentDestination,int?page,DateTime?StartDate,DateTime?EndDate, DateTime? currentStartDate, DateTime? currentEndDate)
         {
@@ -136,16 +138,47 @@ namespace SinExWebApp20309206.Controllers
             int pageSize = 5;
             int pageNumber = (page ?? 1);
 
-            //Retain search conditions for sorting
-            if (ShippingAccountId == null)
+            if (System.Web.HttpContext.Current.User.IsInRole("Employee"))
             {
-                ShippingAccountId = currentShippingAccountId;
+                
+
+                //Retain search conditions for sorting
+                if (ShippingAccountId == null)
+                {
+                    ShippingAccountId = currentShippingAccountId;
+                }
+                else
+                {
+                    pageNumber = 1;
+                }
+                ViewBag.CurrentAccountId = ShippingAccountId;
+
             }
-            else
-            {
-                pageNumber = 1;
+            else if (System.Web.HttpContext.Current.User.IsInRole("Customer")) {
+                string userName = System.Web.HttpContext.Current.User.Identity.Name;
+                if (userName == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                ShippingAccount shippingAccount = db.ShippingAccounts.SingleOrDefault(s => s.UserName == userName);
+                if (shippingAccount == null)
+                {
+                    return HttpNotFound("There is no shipping account with user name\"" + userName + "\".");
+                }
+                
+                //Retain search conditions for sorting
+                if (ShippingAccountId == null)
+                {
+                    ShippingAccountId = shippingAccount.ShippingAccountId;
+                }
+                else
+                {
+                    pageNumber = 1;
+                }
+                ViewBag.CurrentAccountId = ShippingAccountId;
+
             }
-            ViewBag.CurrentAccountId = ShippingAccountId;
+
             if (StartDate == null)
             {
                 StartDate = currentStartDate;

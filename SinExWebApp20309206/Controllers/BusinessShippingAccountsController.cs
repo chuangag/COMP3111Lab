@@ -42,18 +42,36 @@ namespace SinExWebApp20309206.Controllers
         }
 
         // GET: BusinessShippingAccounts/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit()
         {
-            if (id == null)
+            if (System.Web.HttpContext.Current.User.IsInRole("Customer"))
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                string userName = System.Web.HttpContext.Current.User.Identity.Name;
+                if (userName == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                ShippingAccount tempshippingAccount = db.ShippingAccounts.SingleOrDefault(s => s.UserName == userName);
+                if (tempshippingAccount == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                int tempId = tempshippingAccount.ShippingAccountId;
+                BusinessShippingAccount businessShippingAccount = (BusinessShippingAccount)db.ShippingAccounts.Find(tempId);
+
+                return View(businessShippingAccount);
             }
-            BusinessShippingAccount businessShippingAccount = (BusinessShippingAccount)db.ShippingAccounts.Find(id);
-            if (businessShippingAccount == null)
-            {
-                return HttpNotFound();
-            }
-            return View(businessShippingAccount);
+            else { return RedirectToAction("Index", "Home"); }
+            /* if (id == null)
+             {
+                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+             }
+             BusinessShippingAccount businessShippingAccount = (BusinessShippingAccount)db.ShippingAccounts.Find(id);
+             if (businessShippingAccount == null)
+             {
+                 return HttpNotFound();
+             }
+             return View(businessShippingAccount);*/
         }
 
         // POST: BusinessShippingAccounts/Edit/5
@@ -65,9 +83,10 @@ namespace SinExWebApp20309206.Controllers
         {
             if (ModelState.IsValid)
             {
+                businessShippingAccount.UserName = System.Web.HttpContext.Current.User.Identity.Name;
                 db.Entry(businessShippingAccount).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
             return View(businessShippingAccount);
         }

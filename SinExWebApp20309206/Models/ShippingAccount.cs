@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SinExWebApp20309206.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -26,7 +27,7 @@ namespace SinExWebApp20309206.Models
         [RegularExpression(@"^.*[@].*[.].*$", ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email")]
         public virtual string emailAddress { get; set; }
-        
+        [Required(ErrorMessage = "The Building field is required")]
         [StringLength(50)]
         [Display(Name = "Building")]
         public virtual string buildingInformation { get; set; }
@@ -40,7 +41,7 @@ namespace SinExWebApp20309206.Models
         public virtual string city { get; set; }
         [Required(ErrorMessage = "The Province field is required")]
         [StringLength(2, MinimumLength = 2)]
-        [RegularExpression(@"^[A-Z]*$")]
+        [RegularExpression(@"^[A-Z]*$",ErrorMessage ="Please input a valid province code")]
         [Display(Name = "Province")]
         public virtual string provinceCode { get; set; }
         [StringLength(6, MinimumLength = 5)]
@@ -49,8 +50,9 @@ namespace SinExWebApp20309206.Models
         public virtual string postalCode { get; set; }
         [Required(ErrorMessage = "The Type field is required")]
         [Display(Name = "Type")]
+        [RegularExpression(@"^American Express$|^Diners Club$|^Discover$|^MasterCard$|^UnionPay$|^Visa$", ErrorMessage = "only American Express, Diners Club, Discover, MasterCard, UnionPay and Visa are accepted")]
         public virtual string cardType { get; set; }
-        [Required]
+        [Required(ErrorMessage = "The Number field is required")]
         [StringLength(19, MinimumLength = 14)]
         [RegularExpression(@"^[0-9]*$", ErrorMessage = "The field Number must be a number")]
         [Display(Name = "Number")]
@@ -76,6 +78,11 @@ namespace SinExWebApp20309206.Models
         public virtual int expiryYear { get; set; }
 
         public virtual ICollection<Shipment> Shipments { get; set; }
+        /*public IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
+            if (cardType != "American Express" && cardType != "Diners" && cardType != "Club" && cardType != "Discover" && cardType != "MasterCard" && cardType != "UnionPay" && cardType != "Visa") {
+                yield return new ValidationResult("only American Express, Diners Club, Discover, MasterCard, UnionPay and Visa are accepted", new[] { "Type" });
+            }
+        }*/
 
     }
     

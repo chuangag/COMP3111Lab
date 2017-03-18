@@ -76,6 +76,7 @@ namespace SinExWebApp20309206.Models
         [Required]
         [StringLength(15, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 8)]
         [DataType(DataType.Password)]
+        [RegularExpression("^.*?[^a-zA-Z0-9].*?[^a-zA-Z0-9].*$", ErrorMessage = "A password should be between 8 and 15 characters and contain at least two non-alphanumeric characters")]
         [Display(Name = "Password")]
         public string Password { get; set; }
 

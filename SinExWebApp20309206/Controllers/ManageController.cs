@@ -7,9 +7,11 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SinExWebApp20309206.Models;
+using System.Net;
 
 namespace SinExWebApp20309206.Controllers
 {
+    
     [Authorize]
     public class ManageController : Controller
     {
@@ -332,8 +334,20 @@ namespace SinExWebApp20309206.Controllers
 
             base.Dispose(disposing);
         }
-
-#region Helpers
+        private SinExDatabaseContext db = new SinExDatabaseContext();
+        public ActionResult UpdateInfo() {
+            string userName = System.Web.HttpContext.Current.User.Identity.Name;
+            var tempshippingAccount = db.ShippingAccounts.SingleOrDefault(s => s.UserName == userName);
+            //tempshippingAccount=db.ShippingAccounts.Select(s=>s.Discriminator==)
+            if (tempshippingAccount is PersonalShippingAccount) {
+                return RedirectToAction("Edit", "PersonalShippingAccounts");
+            }
+            else if(tempshippingAccount is BusinessShippingAccount){
+                return RedirectToAction("Edit", "BusinessShippingAccounts");
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 

@@ -10,11 +10,12 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ExchangeRate)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.CurrencyCode)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExchangeRate)
+        </th>
+        
     </tr>
 
 @foreach (var item in Model) {
@@ -25,11 +26,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.ExchangeRate)
         </td>
+@if (User.IsInRole("Employee"))
+{
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CurrencyCode }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.CurrencyCode }) |
             
         </td>
-    </tr>
+}
+        </tr>
 }
 
 </table>
