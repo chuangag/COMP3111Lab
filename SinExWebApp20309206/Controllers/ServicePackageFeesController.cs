@@ -120,6 +120,18 @@ namespace SinExWebApp20309206.Controllers
             var servicePackageFees = db.ServicePackageFees.Include(s => s.PackageType).Include(s => s.ServiceType);
             return View(servicePackageFees.ToList());
         }
+        public ActionResult IndexCur(string currencyCode)
+        {
+            var servicePackageFees = db.ServicePackageFees.Include(s => s.PackageType).Include(s => s.ServiceType);
+            foreach (ServicePackageFee servicePackageFee in servicePackageFees) {
+                Currency cur = db.Currencies.SingleOrDefault(s => s.CurrencyCode == currencyCode);
+                if (cur != null) {
+                    servicePackageFee.Fee = servicePackageFee.Fee * (decimal)cur.ExchangeRate;
+                    servicePackageFee.MinimumFee = servicePackageFee.MinimumFee * (decimal)cur.ExchangeRate;
+                }
+            }
+            return View(servicePackageFees.ToList());
+        }
         public ActionResult Index2()
         {
             var servicePackageFees = db.ServicePackageFees.Include(s => s.PackageType).Include(s => s.ServiceType);

@@ -370,6 +370,7 @@
     <Content Include="Views\ServicePackageFees\_FeeSearchPartial.cshtml" />
     <Content Include="Views\ServicePackageFees\_FeeListPartial.cshtml" />
     <Content Include="Views\ServicePackageFees\_FeeResultPartial.cshtml" />
+    <Content Include="Views\ServicePackageFees\IndexCur.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
