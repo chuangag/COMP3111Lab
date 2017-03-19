@@ -20,8 +20,13 @@
 
     }
 
+    
 }
+
+
+
 <h2>Service/Package Fees </h2>
+
 <table class="table">
     <tr>
         <th rowspan="2">
@@ -54,7 +59,7 @@
                 @foreach (var Package in Dic[Service].Keys)
                 {
                 <td>
-                    @{string Fee = Dic[Service][Package].Fee.ToString() + "(" + Dic[Service][Package].MinimumFee.ToString() + ")";
+                    @{string Fee = (Dic[Service][Package].Fee).ToString() + "(" + (Dic[Service][Package].MinimumFee).ToString() + ")";
                     @Fee}
 
                 </td>

@@ -226,7 +226,6 @@
     <Compile Include="Models\BusinessShippingAccount.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\Destination.cs" />
-    <Compile Include="Models\FeeCalculator.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PackageType.cs" />
@@ -240,6 +239,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Validators\CardType.cs" />
+    <Compile Include="ViewModels\FeeCalculatorViewModel.cs" />
+    <Compile Include="ViewModels\FeeListViewModel.cs" />
+    <Compile Include="ViewModels\FeeResultViewModel.cs" />
+    <Compile Include="ViewModels\FeeSearchViewModel.cs" />
     <Compile Include="ViewModels\RegisterCustomerViewModel.cs" />
     <Compile Include="ViewModels\ShipmentsDateSearchViewModel.cs" />
     <Compile Include="ViewModels\ShipmentsListViewModel.cs" />
@@ -363,6 +366,10 @@
     <Content Include="Views\PersonalShippingAccounts\_PersonalInformationPartial.cshtml" />
     <Content Include="Views\BusinessShippingAccounts\_BusinessInformationPartial.cshtml" />
     <Content Include="Views\Shared\_RegisterLoginPartial.cshtml" />
+    <Content Include="Views\ServicePackageFees\CalculateFee.cshtml" />
+    <Content Include="Views\ServicePackageFees\_FeeSearchPartial.cshtml" />
+    <Content Include="Views\ServicePackageFees\_FeeListPartial.cshtml" />
+    <Content Include="Views\ServicePackageFees\_FeeResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

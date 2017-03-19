@@ -1,0 +1,32 @@
+﻿@model SinExWebApp20309206.ViewModels.FeeSearchViewModel
+
+@using (Html.BeginForm("CalculateFee", "ServicePackageFees", FormMethod.Get))
+{
+    @Html.LabelFor(a=>a.Origin,"Origin:   ")
+    @Html.DropDownListFor(a => a.Origin, Model.Origins, "Please choose")
+    <br/>
+    @Html.LabelFor(a => a.Destination, "Destination:   ")
+    @Html.DropDownListFor(a => a.Destination, Model.Destinations, "Please choose")
+    <br/>
+    @Html.LabelFor(a => a.ServiceType, "Service Type:   ")
+    @Html.DropDownListFor(a => a.ServiceType,Model.ServiceTypes, "Please choose")
+    <br/>
+    @Html.LabelFor(a => a.PackageType, "Package Type:   ")
+    @Html.DropDownListFor(a => a.PackageType, Model.PackageTypes, "Please choose")
+    <br />
+    @Html.LabelFor(model => model.PackageNum)
+    
+    @Html.EditorFor(model => model.PackageNum, new { htmlAttributes=new { @Value = 1 } })
+    @Html.ValidationMessageFor(model => model.PackageNum, "")
+    
+
+    <br/>
+    @Html.LabelFor(a => a.CurrencyCode, "Currency:   ")
+    @Html.DropDownListFor(a => a.CurrencyCode, Model.CurrencyCodes, "Please choose")
+
+    <br/>
+    @Html.LabelFor(a => a.isOverWeight, "Overweight?  ")
+    @Html.CheckBoxFor(a => a.isOverWeight, false)
+    <br />
+    <input type="submit" value="Calculate"/>
+}

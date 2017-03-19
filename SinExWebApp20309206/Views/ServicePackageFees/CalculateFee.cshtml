@@ -1,0 +1,17 @@
+﻿@model SinExWebApp20309206.ViewModels.FeeCalculatorViewModel
+@{
+    ViewBag.Title = "CalculateFee";
+}
+
+<h2>Calculate Fee</h2>
+<h1>
+    Total Fee:
+    @Html.Partial("_FeeResultPartial", Model.FeeResult)
+
+</h1>
+
+@Html.Partial("_FeeSearchPartial",Model.ServicePackageFee)
+<!--@Html.Partial("_FeeListPartial",Model.ServicePackageFees)-->
+
+
+
