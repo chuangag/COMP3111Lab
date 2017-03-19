@@ -54,7 +54,10 @@ namespace SinExWebApp20309206.Controllers
                     }
                     if (PackageNum.HasValue)
                     {
-                        totalFee *= (int)PackageNum;
+                        if (PackageNum >= 1) {
+                            totalFee *= (int)PackageNum;
+                        }
+                        
                     }
                     Currency cur = db.Currencies.SingleOrDefault(s => s.CurrencyCode == CurrencyCode);
                     if (cur != null) {
