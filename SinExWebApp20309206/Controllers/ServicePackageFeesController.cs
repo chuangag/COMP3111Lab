@@ -11,7 +11,7 @@ using SinExWebApp20309206.ViewModels;
 
 namespace SinExWebApp20309206.Controllers
 {
-    public class ServicePackageFeesController : Controller
+    public class ServicePackageFeesController : BaseController
     {
         private SinExDatabaseContext db = new SinExDatabaseContext();
 
@@ -135,6 +135,14 @@ namespace SinExWebApp20309206.Controllers
         public ActionResult Index2()
         {
             var servicePackageFees = db.ServicePackageFees.Include(s => s.PackageType).Include(s => s.ServiceType);
+            return View(servicePackageFees.ToList());
+        }
+        public ActionResult Index3(string currencyCode) {
+            var servicePackageFees = db.ServicePackageFees.Include(s => s.PackageType).Include(s => s.ServiceType);
+            foreach (ServicePackageFee fee in servicePackageFees){
+                fee.Fee = ConvertCurrency(fee.Fee, currencyCode);
+                fee.MinimumFee = ConvertCurrency(fee.MinimumFee, currencyCode);
+            }
             return View(servicePackageFees.ToList());
         }
 
